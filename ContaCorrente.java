@@ -6,17 +6,19 @@ public class ContaCorrente extends Conta {
     }
 
     @Override
-    public boolean Depositar(double deposito) {
+    public String toString() {
         
-        return super.Depositar(deposito);
+        return "Conta Corrente " + super.toString();
     }
-    
-    @Override
-    public boolean Sacar(double saque) {
-        if(saldo - saque < saldo){
 
-        }
-        return super.Sacar(saque);
+    
+    public boolean Sacar(int numero ,double valor) {
+        
+        return super.Sacar(valor);
     }
+
+
+    
+
     
 }

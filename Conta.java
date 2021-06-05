@@ -13,24 +13,35 @@ public Conta(int numero, double saldo){
 }
 
 //getter/setters
+    public double getSaldo() {
+        return saldo;
+    }
+    public int getNumero() {
+        return numero;
+    }
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
 
 //Métodos da classe
-public boolean Depositar(double deposito){
+public boolean Depositar(double valor){
     
-    saldo = saldo + deposito;
+    saldo +=valor;
 
     return true;
 }
-public boolean Sacar(double saque){
-
-        saldo = saldo - saque;
-        return true;
+public boolean Sacar(double valor){
+        if((saldo - valor) >= 0){
+            saldo -= valor;
+            return true;
+        }
+      return false;
 
   
 }
 @Override
 public String toString() {
-    return super.toString();
+    return "[Numero: " + numero + "; Saldo disponivel: " + saldo + ";]";
 }
 
 
