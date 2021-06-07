@@ -27,5 +27,10 @@ public class ContaPoupança extends Conta {
         
         return super.Sacar(valor);
     }
+    @Override
+    public String toString() {
+        
+        return " Conta Poupança: " + super.toString();
+    }
 
 }
