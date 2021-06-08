@@ -17,9 +17,9 @@ public class ContaEspecial extends Conta {
 
     @Override
     public String toString() {
-        String s = "Conta Especial:";
+        String s = " Conta Especial:";
         
-        s += "; " + super.toString();
+        s += " " + super.toString();
         s += " limite adicional: " + limite;
         return s;
     }

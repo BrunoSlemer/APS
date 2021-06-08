@@ -30,7 +30,7 @@ public class ContaPoupança extends Conta {
     @Override
     public String toString() {
         
-        return " Conta Poupança: " + super.toString();
+        return " Conta Poupança: " + super.toString() + "Taxa de saque: " + taxa;
     }
 
 }
