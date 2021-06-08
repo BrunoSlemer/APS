@@ -107,7 +107,7 @@ public class AppConta {
                 if (gerencia.sacar(numero,valor)) {
                     System.out.println("Saque de: "+valor+" realizado com sucesso.");
                     } else {
-                    System.out.println("Erro. Deposito não realizado.");
+                    System.out.println("Erro. Saque não realizado.");
                     }
                 
                 break;

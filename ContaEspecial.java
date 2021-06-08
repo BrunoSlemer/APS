@@ -27,13 +27,22 @@ public class ContaEspecial extends Conta {
     public boolean sacar(double valor){
         
         double saldoComLimite = super.getSaldo() + limite;
-        
-        if((saldoComLimite - valor)>=0){
-           double s = saldoComLimite - valor;
+        double s1 = super.getSaldo() - valor;
+
+        if (s1 >= 0){
             
-           super.setSaldo(s);
-           return true;
+            super.setSaldo(s1);
+            return true;
+
+
         }
+        else if((saldoComLimite - valor)>=0 && (s1 < 0)){
+                
+
+                setLimite(limite + s1);
+                super.setSaldo(0);
+                return true;
+            }
         return false;
     }
     
