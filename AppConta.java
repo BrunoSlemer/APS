@@ -6,10 +6,20 @@ public class AppConta {
         Scanner teclado = new Scanner(System.in);        
         int opcao, opcao2;
         int numero;
-        double saldo, limite,taxa;
+        double saldo, limite,taxa, valor;
         Conta conta;
+        String nome, cpf;
+
+        System.out.println("Qual o nome do cliente?");
+        nome = teclado.nextLine();
+        System.out.println("Qual o cpf do cliente?");
+        cpf = teclado.nextLine();
+        
+        
+
 
     do {
+        System.out.println("conta de:"+ gerencia.mostrarCliente(nome, cpf));
         System.out.println("1-Adicionar Conta");
         System.out.println("2-Remover Conta");
         System.out.println("3-Listar Conta");
@@ -33,9 +43,8 @@ public class AppConta {
                         System.out.println("Qual o Numero da Conta?");
                         numero = Integer.parseInt(teclado.nextLine());
                         System.out.println("Qual o Saldo inicial da Conta?");
-                        //saldo = Double.parseDouble(teclado.nextLine());
-                        teclado.nextLine();
-                        saldo = teclado.nextDouble();
+                        saldo = Double.parseDouble(teclado.nextLine());
+                        //saldo = teclado.nextDouble(); arrumar buffer!!!
                         conta = new ContaCorrente(numero, saldo);
                         gerencia.adicionar(conta);
                         break;
@@ -91,13 +100,20 @@ public class AppConta {
                 break;
         
             case 4:
-                System.out.println("Qual o numero da Conta para o Saque?");
-                numero = teclado.nextInt();
+                System.out.println("Qual o numero da Conta para o Saque: ");
+                numero = Integer.parseInt(teclado.nextLine());
+                System.out.println("Qual o valor do Saque: ");
+                valor = Double.parseDouble(teclado.nextLine());
                 
                 
                 break;
         
             case 5:
+                System.out.println("Qual o numero da Conta para Deposito: ");
+                numero = Integer.parseInt(teclado.nextLine());
+                System.out.println("Qual o valor do Deposito: ");
+                valor = Double.parseDouble(teclado.nextLine());
+
                 
                 break;
             case 6:

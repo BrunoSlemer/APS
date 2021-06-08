@@ -2,6 +2,7 @@ public abstract class Conta {
 //Atributos
 private int numero;
 private double saldo;
+private Cliente cliente;
     
 //Contrutor
 public Conta(){}//default
@@ -22,6 +23,10 @@ public Conta(int numero, double saldo){
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
+    public Cliente getCliente() {
+        return cliente;
+    }
+
 
 //Métodos da classe
 public boolean depositar(double valor){
