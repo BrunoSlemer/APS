@@ -24,13 +24,13 @@ public Conta(int numero, double saldo){
     }
 
 //Métodos da classe
-public boolean Depositar(double valor){
+public boolean depositar(double valor){
     
     saldo +=valor;
 
     return true;
 }
-public boolean Sacar(double valor){
+public boolean sacar(double valor){
         if((saldo - valor) >= 0){
             saldo -= valor;
             return true;

@@ -17,18 +17,24 @@ public class ContaEspecial extends Conta {
 
     @Override
     public String toString() {
-        String s = "ContaEspecial";
-        s += " limite: " + limite;
+        String s = "Conta Especial:";
+        
         s += "; " + super.toString();
+        s += " limite adicional: " + limite;
         return s;
     }
+    @Override
     public boolean sacar(double valor){
         
-        double saldoComLimite = super.getSaldo() + getLimite();
+        double saldoComLimite = super.getSaldo() + limite;
         
-        if((saldoComLimite-valor)>=0){
-            super.setSaldo(super.getSaldo()-valor);
+        if((saldoComLimite - valor)>=0){
+           double s = saldoComLimite - valor;
+            
+           super.setSaldo(s);
+           return true;
         }
-        return super.Sacar(valor);
+        return false;
     }
+    
 }

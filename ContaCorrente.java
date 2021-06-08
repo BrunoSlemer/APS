@@ -12,10 +12,7 @@ public class ContaCorrente extends Conta {
     }
 
     
-    public boolean Sacar(int numero ,double valor) {
-        
-        return super.Sacar(valor);
-    }
+
 
 
     
