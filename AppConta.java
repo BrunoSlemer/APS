@@ -44,7 +44,6 @@ public class AppConta {
                         numero = Integer.parseInt(teclado.nextLine());
                         System.out.println("Qual o Saldo inicial da Conta?");
                         saldo = Double.parseDouble(teclado.nextLine());
-                        //saldo = teclado.nextDouble(); arrumar buffer!!!
                         conta = new ContaCorrente(numero, saldo);
                         gerencia.adicionar(conta);
                         break;
